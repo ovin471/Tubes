@@ -348,7 +348,7 @@ func SequentialSearch(A *arrData, n, JumlahNominal int) {
 func BinarySearch(A *arrData, n, JumlahNominal int) {
 	var kiri, kanan, tengah, hasil int
 	var YangDicari string
-	kiri = 0
+	kiri = 1
 	kanan = n
 	hasil = -1
 
