@@ -143,7 +143,7 @@ func cetakData(A arrData, n, JumlahNominal int) {
 	var TotalSaldo, JumlahBelumLunas int
 
 	for i := 1; i <= n; i++ {
-		if A[i].riwayat_trasnsaksi < (n * (JumlahNominal * 6)) {
+		if A[i].riwayat_trasnsaksi < (JumlahNominal * 6) {
 			A[i].status = "Belum Lunas"
 		} else {
 			A[i].status = "Lunas"
@@ -176,7 +176,7 @@ func cetakData(A arrData, n, JumlahNominal int) {
 	fmt.Printf("|===================================================|\n")
 	fmt.Printf("| Jumlah Mahasiswa Yang Belum Lunas : %-13d |\n", JumlahBelumLunas)
 	fmt.Printf("|===================================================|\n")
-	fmt.Printf("| Jumlah Kas Selama 6 Bulan : %-21d |\n", (JumlahNominal*6)-TotalSaldo)
+	fmt.Printf("| Jumlah Kas Selama 6 Bulan : %-21d |\n", (n *(JumlahNominal*6))-TotalSaldo)
 	fmt.Printf("|===================================================|\n")
 }
 
